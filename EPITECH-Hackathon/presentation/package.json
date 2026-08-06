@@ -1,0 +1,13 @@
+{
+  "name": "in-the-loop",
+  "version": "1.0.0",
+  "description": "Media & AI hackathon deck (reveal.js) — helping journalists trust AI",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "serve": "node server.js"
+  },
+  "dependencies": {
+    "reveal.js": "5.1.0"
+  }
+}

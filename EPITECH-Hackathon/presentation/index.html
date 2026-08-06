@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>In The Loop — Media &amp; AI Hackathon</title>
+
+	<!-- reveal.js is vendored locally under dist/ and plugin/ -->
+	<link rel="stylesheet" href="dist/reset.css" />
+	<link rel="stylesheet" href="dist/reveal.css" />
+	<link rel="stylesheet" href="dist/theme/black.css" id="theme" />
+	<link rel="stylesheet" href="plugin/highlight/monokai.css" />
+
+	<!-- deck-specific styles -->
+	<link rel="stylesheet" href="css/custom.css" />
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ══════════════════════════════════════
+     1. TITLE
+═══════════════════════════════════════ -->
+<section>
+	<!-- Rename this project/title freely -->
+	<h1 style="font-size:3em;letter-spacing:.08em;font-weight:900;margin-bottom:.1em;">
+		LinkForge
+	</h1>
+	<p>AI investigator assistant</p>
+	<div style="display:flex;gap:1.4rem;justify-content:center;flex-wrap:wrap;margin-top:2.6rem;">
+		<div data-id="p1" class="team-mini-card">Jean-Marc KOTTIN</div>
+		<div data-id="p2" class="team-mini-card">Youngseok Seo</div>
+		<div data-id="p3" class="team-mini-card">Dangchan Lee</div>
+	</div>
+</section>
+
+<!-- ══════════════════════════════════════
+     3. THE PROBLEM
+═══════════════════════════════════════ -->
+<section data-auto-animate>
+	<h2 data-id="prob-heading">The problem</h2>
+	<p class="subtitle">Why this, why now</p>
+	<div style="display:flex;flex-direction:column;gap:.75rem;font-size:.82em;">
+		<div class="action-card fragment"><span class="action-card-icon">📉</span>
+			<div><strong>Newsrooms are under pressure</strong><p>Fewer resources, faster cycles, and an ever-growing pile of documents to sift through</p></div></div>
+		<div class="action-card fragment"><span class="action-card-icon">🌊</span>
+			<div><strong>AI is arriving anyway</strong><p>It is entering journalism whether or not newsrooms embrace it, often without guardrails</p></div></div>
+		<div class="action-card fragment"><span class="action-card-icon">🚫</span>
+			<div><strong>The people we most want to help refuse it</strong><p>The journalists doing the sensitive work are the most reluctant to let AI near it</p></div></div>
+	</div>
+	<aside class="notes">The real question is not "can AI do journalism". It is "why won't journalists let it help, and what would change that".</aside>
+</section>
+
+<!-- ══════════════════════════════════════
+     8. WHERE AI HELPS vs WHERE IT DOESN'T
+═══════════════════════════════════════ -->
+<section>
+	<h2>Where AI fits — and where it doesn't</h2>
+	<div class="split" style="margin-top:.6rem;">
+		<div class="col good fragment">
+			<h3>✔ USEFUL — processing toil</h3>
+			<div>
+				<span class="pill good">Transcription</span>
+				<span class="pill good">Translation</span>
+				<span class="pill good">Summarizing big docs</span>
+				<span class="pill good">Searching document sets</span>
+				<span class="pill good">Clustering</span>
+				<span class="pill good">Monitoring &amp; alerts</span>
+				<span class="pill good">Structuring data</span>
+				<span class="pill good">Draft scaffolding</span>
+			</div>
+			<p style="font-size:.66em;opacity:.7;margin-top:.7rem;">A human can verify the output in seconds.</p>
+		</div>
+		<div class="col bad fragment">
+			<h3>✘ UNTRUSTWORTHY — being the authority</h3>
+			<div>
+				<span class="pill bad">Deciding what is true</span>
+				<span class="pill bad">Fact verdicts</span>
+				<span class="pill bad">Writing in the outlet's voice</span>
+				<span class="pill bad">Editorial decisions</span>
+				<span class="pill bad">Naming the guilty</span>
+			</div>
+			<p style="font-size:.66em;opacity:.7;margin-top:.7rem;">A confident hallucination here causes real harm.</p>
+		</div>
+	</div>
+	<aside class="notes">The consensus across 2026 newsroom research: AI's value is in processing information, not writing stories or deciding truth.</aside>
+</section>
+
+<!--&lt;!&ndash; ══════════════════════════════════════-->
+<!--     11. OUR APPROACH — TWO PROTOTYPES-->
+<!--═══════════════════════════════════════ &ndash;&gt;-->
+<!--<section>-->
+<!--	<h2>What we built</h2>-->
+<!--	<p class="subtitle">Two prototypes, one principle</p>-->
+<!--	<div class="r-hstack" style="gap:1.4rem;align-items:stretch;">-->
+<!--		<div class="fragment" style="flex:1;border:1px solid var(&#45;&#45;accent);border-radius:12px;padding:1.4rem;">-->
+<!--			<p style="font-size:1.7em;margin:0 0 .3rem;">🛡️</p>-->
+<!--			<strong style="font-size:.9em;">Editorial Guard</strong>-->
+<!--			<p style="font-size:.62em;color:var(&#45;&#45;accent);letter-spacing:.1em;margin:.2rem 0 .6rem;">TOPIC #7</p>-->
+<!--			<p style="font-size:.72em;opacity:.8;">A pre-publication linter for legal and editorial risk</p>-->
+<!--		</div>-->
+<!--		<div class="fragment" style="flex:1;border:1px solid var(&#45;&#45;purple);border-radius:12px;padding:1.4rem;">-->
+<!--			<p style="font-size:1.7em;margin:0 0 .3rem;">🕸️</p>-->
+<!--			<strong style="font-size:.9em;">Document Graph</strong>-->
+<!--			<p style="font-size:.62em;color:var(&#45;&#45;purple);letter-spacing:.1em;margin:.2rem 0 .6rem;">TOPIC #4</p>-->
+<!--			<p style="font-size:.72em;opacity:.8;">A link map across large document sets for investigations</p>-->
+<!--		</div>-->
+<!--	</div>-->
+<!--	<p class="fragment" style="margin-top:1.2rem;font-size:.78em;opacity:.75;">Both never decide. Both cite their sources. Both keep the human in charge.</p>-->
+<!--</section>-->
+
+<!-- 13. EDITORIAL GUARD — LIVE DEMO -->
+<section data-background="#0d0d0d">
+	<iframe  style="width: 100%; height: 16em;" data-src="http://127.0.0.1:8000/frontend/index.html" data-preload></iframe>
+</section>
+
+<!-- 15. DOCUMENT GRAPH — LIVE DEMO
+<section data-background="#0d0d0d">
+	<iframe  style="width: 100%; height: 16em;" data-src="http://127.0.0.1:8080" data-preload></iframe>
+</section> -->
+
+<!-- ══════════════════════════════════════
+	 19. Q&A
+═══════════════════════════════════════ -->
+<section>
+	<h1 style="font-size:3em;font-weight:900;letter-spacing:.1em;">
+		Q<span style="color:var(--bad)">&amp;</span>A
+	</h1>
+	<p style="opacity:.55;letter-spacing:.18em;text-transform:uppercase;font-size:.82em;margin-top:.6rem;">Thank you</p>
+	<h4>Connect evidence. Discover Relationship</h4>
+</section>
+</div><!-- .slides -->
+</div><!-- .reveal -->
+
+<!-- mermaid from CDN (same as the reference deck); swap for a local copy if you need full offline -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+
+<!-- reveal.js, vendored locally -->
+<script src="dist/reveal.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script>
+	mermaid.initialize({
+		startOnLoad: false,
+		theme: 'dark',
+		securityLevel: 'loose',
+		flowchart: { curve: 'basis' },
+	});
+
+	Reveal.initialize({
+		hash: true,
+		slideNumber: 'c/t',
+		width: 1500,
+		height: window.innerHeight,
+		margin: 0.03,
+		transition: 'slide',
+		plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+	});
+
+	Reveal.on('ready', () => mermaid.run());
+	Reveal.on('slidechanged', () => mermaid.run());
+</script>
+</body>
+</html>

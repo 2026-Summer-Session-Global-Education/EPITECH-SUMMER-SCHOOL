@@ -1,0 +1,56 @@
+[
+  {
+    "id": "R1",
+    "category": "unattributed_accusation",
+    "name": "Unattributed accusation stated as fact",
+    "severity": "high",
+    "why": "The text asserts wrongdoing as established fact without attributing it to a source, an investigation, or a formal charge. If the claim is untrue or unproven, this carries high defamation exposure.",
+    "standard_label": "Attribution principle (paraphrased, AP / Reuters style)",
+    "standard_text": "Claims of wrongdoing should be attributed to their source or to a formal charge rather than stated as fact in the outlet's own voice."
+  },
+  {
+    "id": "R2",
+    "category": "presumption_of_innocence",
+    "name": "Allegation framed as guilt",
+    "severity": "high",
+    "why": "The text labels a person as guilty of a crime before conviction. This conflicts with the presumption of innocence and increases legal exposure.",
+    "standard_label": "Presumption of innocence (paraphrased)",
+    "standard_text": "A person who has been charged but not convicted should not be described as guilty; use 'accused', 'alleged', or 'charged with' until a court has ruled."
+  },
+  {
+    "id": "R3",
+    "category": "loaded_language",
+    "name": "Loaded or editorial language in reporting",
+    "severity": "medium",
+    "why": "A word or phrase inserts the writer's judgement into what is presented as neutral reporting. This can undermine impartiality and, when applied to a person, feed a defamation claim.",
+    "standard_label": "Impartiality principle (paraphrased)",
+    "standard_text": "Reporting should avoid emotive or conclusory adjectives that state the writer's opinion as fact; let attributed facts carry the weight."
+  },
+  {
+    "id": "R4",
+    "category": "unverifiable_absolute",
+    "name": "Unverifiable absolute or superlative",
+    "severity": "low",
+    "why": "Absolute claims such as 'always', 'never', or 'the only' are hard to defend as literally true and are easy to disprove with a single counterexample.",
+    "standard_label": "Accuracy principle (paraphrased)",
+    "standard_text": "Avoid absolute claims unless they can be substantiated; qualify with the evidence available."
+  },
+  {
+    "id": "R5",
+    "category": "privacy",
+    "name": "Potential privacy intrusion",
+    "severity": "medium",
+    "why": "The text may expose identifying private details of an individual, such as a home address. Publishing these can raise privacy and safety concerns without a clear public interest justification.",
+    "standard_label": "Privacy principle (paraphrased)",
+    "standard_text": "Do not publish private identifying details of individuals unless there is a clear public interest that outweighs the intrusion."
+  },
+  {
+    "id": "R6",
+    "category": "copyright_quote",
+    "name": "Long verbatim quotation",
+    "severity": "low",
+    "why": "A long passage reproduced verbatim may exceed fair use and create a copyright risk. Paraphrase where possible and keep any quotation short and clearly attributed.",
+    "standard_label": "Copyright principle (paraphrased)",
+    "standard_text": "Reproduce only as much of a copyrighted work as is necessary; prefer paraphrase and keep verbatim quotation brief and attributed."
+  }
+]

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TruthLink AI</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <aside class="panel">
+        <header>
+          <p class="eyebrow">LinkForge</p>
+          <h1>TruthLink AI <br> AI Investigation Assistant</h1>
+          <p class="sub">Upload documents <br> &emsp;&emsp;&emsp;&emsp; ▼ <br> AI analyzes entities <br> &emsp;&emsp;&emsp;&emsp; ▼ <br> Explore the relationship graph</p>
+        </header>
+
+        <div class="tabs">
+          <button id="fileTab" class="active" type="button">File</button>
+          <button id="textTab" type="button">Text</button>
+        </div>
+
+        <section id="fileBox" class="input-box">
+          <label class="drop">
+            <input id="fileInput" type="file" accept=".pdf,.txt,text/plain,application/pdf" multiple />
+            <span id="fileName">Choose PDF/TXT files</span>
+          </label>
+        </section>
+
+        <section id="textBox" class="input-box hidden">
+          <textarea id="textInput">On March 14, 2025, Senator Alice Morgan met with CEO Daniel Price at Harbor View Hotel.
+Two days later, Northstar Holdings LLC transferred $250,000 to Civic Future Foundation.
+Director Maria Chen wrote that the payment should be routed through Blue Lantern Partners LLC before the public infrastructure vote.
+Blue Lantern Partners LLC then paid $95,000 to Shoreline Media Group.</textarea>
+        </section>
+
+        <button id="analyzeBtn" class="primary" type="button">Analyze Documents</button>
+        <p id="status" class="status"></p>
+        <button id="fallbackBtn" class="fallback-link" type="button">Execution Result</button>
+        <section class="progress" aria-label="Analysis progress">
+          <div class="progress-meta">
+            <span id="progressLabel">Ready</span>
+            <strong id="progressPercent">0%</strong>
+          </div>
+          <div class="progress-track">
+            <div id="progressBar" class="progress-bar"></div>
+          </div>
+        </section>
+
+        <section class="stats">
+          <div><strong id="nodeCount">0</strong><span>entities</span></div>
+          <div><strong id="linkCount">0</strong><span>relationships</span></div>
+        </section>
+
+        <section class="legend">
+          <div><i class="person"></i> Person</div>
+          <div><i class="org"></i> Organization</div>
+          <div><i class="location"></i> Location</div>
+          <div><i class="amount"></i> Amount</div>
+          <div><i class="date"></i> Date</div>
+          <div><i class="concept"></i> Concept / Claim</div>
+          <div><i class="artifact"></i> Artifact / System</div>
+        </section>
+      </aside>
+
+      <section class="stage">
+        <div class="graph-wrap">
+          <div class="graph-controls" aria-label="Graph zoom controls">
+            <button id="zoomInBtn" type="button" aria-label="Zoom in">+</button>
+            <button id="zoomOutBtn" type="button" aria-label="Zoom out">-</button>
+          </div>
+          <svg id="graph" role="img" aria-label="Relationship graph"></svg>
+          <div id="empty" class="empty">
+            <h2>No graph yet</h2>
+            <p>Upload files or use the Text tab to start analysis.</p>
+          </div>
+        </div>
+
+        <div
+          id="detailsResizeHandle"
+          class="details-resize-handle"
+          role="separator"
+          aria-label="Resize relationship details panel"
+          aria-orientation="horizontal"
+          tabindex="0"
+        ></div>
+
+        <section class="details">
+          <div>
+            <h2>Relationships</h2>
+            <div id="relationships" class="relationships">
+              <p class="muted">No relationships extracted yet.</p>
+            </div>
+          </div>
+          <div>
+            <h2>Preview</h2>
+            <pre id="preview">A text preview will appear after analysis.</pre>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <dialog id="pdfViewer" class="pdf-viewer">
+      <header class="pdf-viewer-header">
+        <div>
+          <p class="eyebrow">Relationship Evidence</p>
+          <h2 id="pdfViewerTitle">PDF evidence</h2>
+        </div>
+        <button id="closePdfViewer" class="icon-button" type="button" aria-label="Close PDF viewer">&times;</button>
+      </header>
+      <div class="pdf-viewer-body">
+        <iframe id="pdfFrame" title="PDF document"></iframe>
+        <aside class="evidence-panel">
+          <h3>Marked evidence</h3>
+          <div id="evidenceList"></div>
+        </aside>
+      </div>
+    </dialog>
+
+    <script src="./app.js?v=20260709-6"></script>
+  </body>
+</html>

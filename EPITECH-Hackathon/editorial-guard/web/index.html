@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Editorial Guard</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="dot"></span>
+      <div>
+        <h1>Editorial Guard</h1>
+        <p class="tagline">Pre-publication risk linter. Suggestions only, you decide.</p>
+      </div>
+    </div>
+    <div class="top-actions">
+      <button id="standards-toggle" class="ghost">Standards</button>
+      <button id="settings-toggle" class="ghost">Settings</button>
+      <div class="mode" id="mode-badge">checking mode...</div>
+    </div>
+  </header>
+
+  <section id="standards-panel" class="panel hidden">
+    <div class="panel-head">
+      <h2>Newsroom standards and applicable law</h2>
+      <button class="close" id="standards-close" aria-label="Close">&times;</button>
+    </div>
+    <p class="muted">Upload your newsroom's rules or a country's press law as .txt or .pdf.
+      In live mode the AI grounds its flags in these and cites the passage it relied on.
+      In offline mock mode, quoted banned terms in directive lines (for example: avoid "collateral damage") are flagged.</p>
+    <div class="upload-row">
+      <input type="file" id="std-file" accept=".txt,.pdf" multiple />
+      <button id="std-upload" class="primary">Upload</button>
+      <span id="std-status" class="muted"></span>
+    </div>
+    <div id="std-list" class="std-list"></div>
+  </section>
+
+  <section id="settings-panel" class="panel hidden">
+    <div class="panel-head">
+      <h2>API keys and model</h2>
+      <button class="close" id="settings-close" aria-label="Close">&times;</button>
+    </div>
+
+    <h3 class="sub">API keys</h3>
+    <p class="muted">Add one or more API keys (Anthropic or Google Gemini). The active key
+      decides which provider and models are used. Keys are stored locally in this app's
+      database, in plain text, so keep that file private and do not commit it. Keys are
+      shown masked and are only ever sent to their own provider's API.</p>
+    <div id="key-list" class="std-list"></div>
+    <div class="settings-row add-key">
+      <select id="key-provider"><option value="anthropic">Anthropic (Claude)</option><option value="gemini">Google (Gemini)</option></select>
+      <input type="text" id="key-label" placeholder="label (optional)" />
+      <input type="password" id="key-value" placeholder="paste API key" />
+      <button id="key-add" class="primary">Add key</button>
+      <span id="key-status" class="muted"></span>
+    </div>
+
+    <h3 class="sub">Model</h3>
+    <p class="muted">Pick a model the active key can access, or type an id.</p>
+    <div class="settings-row">
+      <label for="model-input">Model</label>
+      <input type="text" id="model-input" placeholder="claude-haiku-4-5" />
+      <select id="model-select"><option value="">available models...</option></select>
+      <button id="model-save" class="primary">Save and test</button>
+    </div>
+    <div id="settings-status" class="muted"></div>
+  </section>
+
+  <main>
+    <section class="editor-pane">
+      <div class="pane-head">
+        <h2>Draft</h2>
+        <div class="actions">
+          <button id="sample-btn" class="ghost">Load sample</button>
+          <button id="analyze-btn" class="primary">Analyze</button>
+        </div>
+      </div>
+      <textarea id="draft" spellcheck="false" placeholder="Paste or write your draft here, then click Analyze."></textarea>
+
+      <div class="pane-head">
+        <h2>Marked up</h2>
+        <div class="counts" id="counts"></div>
+      </div>
+      <div id="rendered" class="rendered"><p class="muted">Run Analyze to see flagged spans.</p></div>
+    </section>
+
+    <aside class="flags-pane">
+      <div class="pane-head"><h2>Flags</h2></div>
+      <div id="flag-list" class="flag-list"><p class="muted">No flags yet.</p></div>
+      <div id="detail" class="detail hidden"></div>
+    </aside>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
