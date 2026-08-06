@@ -1,5 +1,7 @@
 # Relationship Extraction Tool
 
+<img width="1600" height="852" alt="Image" src="https://github.com/user-attachments/assets/d4cbbf72-08c8-4870-93fc-c6ae76efc11f" />
+
 로컬 Ollama를 사용하는 문서 관계 추출 MVP입니다.
 This is an MVP for document relationship extraction using a local Ollama setup.
 
