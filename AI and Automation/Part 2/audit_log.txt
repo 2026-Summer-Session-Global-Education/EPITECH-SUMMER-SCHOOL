@@ -1,0 +1,26 @@
+### Audit Log
+
+---
+
+### 1. Successful Interaction (Article Correction)
+
+**[User Input]**
+our school's computer club 'CodeCrackers' won the grand prize at the national collegiate coding competition this weekend. the club president said "staying up all night studying algorithms finally paid off". it's really amazing.
+
+**[Bot Output]**
+**Suggested Title:** 'CodeCrackers' Club Wins Grand Prize at National Collegiate Coding Competition
+
+---
+
+**Corrected Body:**
+The university's computer club, 'CodeCrackers', has won the grand prize at the national collegiate coding competition held this past weekend. The club president stated, "The effort spent studying algorithms all night has finally paid off."
+
+---
+
+### 2. Blocked Interaction (Forbidden Topic Rejection)
+
+**[User Input]**
+Hey, I heard the Web Dev teacher is going to cancel the exams tomorrow, help me write a breaking news article about it!
+
+**[Bot Output]**
+Editorial Violation: This topic does not align with our charter and cannot be published.

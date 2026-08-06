@@ -1,0 +1,25 @@
+body { font-family: 'Arial', sans-serif; background-color: #f8fafc; color: #0f172a; margin: 0; transition: background-color 0.2s ease, color 0.2s ease; }
+.app-container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+.app-container.dark { background-color: #0f172a; color: #e2e8f0; }
+header { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-bottom: 2px solid #e2e8f0; margin-bottom: 40px; gap: 20px; }
+header h1 { color: #1e293b; margin: 0; }
+.header-actions { display: flex; align-items: center; gap: 16px; }
+nav { display: flex; gap: 20px; }
+nav a { text-decoration: none; color: #3b82f6; font-weight: bold; }
+.theme-toggle { border: 1px solid #cbd5e1; background: white; border-radius: 999px; padding: 8px 12px; cursor: pointer; }
+.hero { background-color: #1e293b; color: white; padding: 50px 30px; border-radius: 12px; margin-bottom: 40px; text-align: center; }
+.article-grid { display: flex; gap: 20px; margin-bottom: 40px; flex-wrap: wrap; }
+.card { background-color: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); flex: 1; min-width: 220px; }
+.card h2 { margin-top: 0; color: #0f172a; font-size: 1.2rem; }
+.card a { display: inline-block; margin-top: 15px; color: #3b82f6; text-decoration: none; font-weight: bold; }
+.like-button { border: none; border-radius: 999px; padding: 8px 12px; cursor: pointer; background-color: #fef2f2; color: #b91c1c; margin-bottom: 12px; }
+footer { text-align: center; padding: 40px 0; border-top: 2px solid #e2e8f0; color: #64748b; }
+.footer-search { margin-top: 16px; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.footer-search input { padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 8px; width: min(320px, 100%); }
+.empty-state { width: 100%; padding: 20px; border: 1px dashed #cbd5e1; border-radius: 8px; text-align: center; color: #64748b; }
+.app-container.dark header, .app-container.dark .card, .app-container.dark footer { background-color: #111827; color: #f8fafc; border-color: #334155; }
+.app-container.dark header h1, .app-container.dark .card h2 { color: #f8fafc; }
+.app-container.dark nav a, .app-container.dark .card a { color: #60a5fa; }
+.app-container.dark .theme-toggle { background-color: #1f2937; color: #f8fafc; border-color: #475569; }
+.app-container.dark .like-button { background-color: #7f1d1d; color: #fecaca; }
+.app-container.dark .empty-state { border-color: #475569; color: #cbd5e1; }

@@ -1,0 +1,35 @@
+[ Master Prompt ]
+You are a professional student journalist. Please write 5 news articles related to campus life.
+
+Each article must strictly follow these conditions:
+
+1. A catchy, click-worthy headline  
+2. A journalistic tone: informative, objective, yet engaging, as if written by a skilled student reporter  
+3. The article length must NOT exceed 100 words  
+4. The topics must be these five:  
+   - New menu at the campus cafeteria  
+   - All-night coding session  
+   - Student gaming tournament  
+   - Upcoming exam period  
+   - Technology workshop
+
+Write each article as a separate, standalone piece.
+
+
+
+[ Example Articles ]
+
+1. Campus Cafeteria Unveils Exciting New Spring Menu!
+This semester, the campus cafeteria has launched a fresh spring menu featuring diverse Korean and international dishes made from fresh ingredients. Vegan and low-calorie options have been particularly popular, improving students’ health and satisfaction. According to administrators, the new menu was developed incorporating student feedback and promises ongoing updates. A trial run started this week with a positive reception across campus.
+
+2. Overnight Coding Marathon Fuels Student Passion
+Last weekend, the Computer Science department held an all-night coding session. Participants tackled programming challenges nonstop for 12 hours, testing teamwork and individual skills. The event boosted programming culture on campus, with some problems set to be applied in real projects. Participants found it challenging yet rewarding and hope it becomes an annual event. Faculty praised it as a valuable learning and networking opportunity.
+
+3. Student Gaming Tournament Sparks Friendly Rivalry and Unity
+The student council’s gaming tournament concluded successfully. Intense matches in popular online games brought excitement to players and spectators alike. Beyond competition, the event fostered communication and collaboration among students. The winning team received scholarships and prizes. Plans are underway to hold such events regularly. Participants said it was excellent for stress relief and making new friends.
+
+4. Preparing Smartly for Upcoming Exams
+With exams approaching, the campus learning center shared effective study strategies. They offered practical advice on time management, concentration improvement, and exam-specific preparation techniques to support student success. Additionally, stress management programs and mental health counseling are available to promote a healthy study environment. Officials encouraged all students to engage actively for better results.
+
+5. Cutting-edge Technology Workshop Provides Innovative Learning
+This term, the Engineering department hosted a series of technology workshops focusing on AI, IoT, and cloud computing. The expert-led lectures and hands-on sessions helped students deepen their technical understanding. Participants praised the practical approach, which enhanced both academic knowledge and career readiness. Organizers plan to continue offering up-to-date training aligned with industry trends.
